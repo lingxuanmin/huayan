@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>图片浏览</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <!--关联样式文件-->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/huayan.css" />
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="opt-head wrapper">
+        <div class="opt-items left-opt">
+            <a class="item">
+                <i class="opt-icon iconfont">&#xe623;</i>
+                <span class="item-name">数据查询</span>
+            </a>
+            <a class="item">
+                <i class="opt-icon iconfont">&#xe623;</i>
+                <span class="item-name">查看图片</span>
+            </a>
+            <a class="item">
+                <i class="opt-icon iconfont">&#xe623;</i>
+                <span class="item-name">查看数据</span>
+            </a>
+            <a class="item">
+                <i class="opt-icon iconfont quit">&#xe60b;</i>
+                <span class="item-name">退出系统</span>
+            </a>
+            
+        </div>
+
+        <div class="opt-items right-opt">
+            <a class="item">
+                <i class="opt-icon iconfont home">&#xe623;</i>
+                <span class="item-name">返回主界面</span>
+            </a>
+                    
+        </div>
+        
+    </div>
+    <!-- 图片浏览主体[[ -->
+	<div class="skim-content wrapper">
+        <!-- 查询条件 -->
+		<div class="skim-condition">
+			<table class="condition" border="1" align="center">
+                <caption align="top">数据查询条件</caption> 
+                <tr>
+                    <td class="qitem-name">石料品种：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">荒料编号：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+              
+                <tr>
+                    <td class="qitem-name">采集时间起：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">采集时间迄：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+            </table>
+            <!-- 按钮 -->
+            <div class="btn clearfix">
+                <a href="javascript:void(0);" class="btn-query" title="数据查询">数据查询</a>
+                <a href="javascript:void(0);" class="btn-refresh" title="查看图片">刷新</a>
+            </div>
+            <!-- 树状nav -->
+            <div class="skim-tree">
+                <!-- <div class="result-title">搜索结果：</div>
+              <ul class="result-file">
+                  <li class="">项目1</li>
+                  <li class="on">项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目1</li>
+                  <li>项目4</li>
+              </ul> -->
+              <div class="easyui-panel" style="padding:5px">
+                 <ul class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true,lines:true">
+                     
+                 </ul>
+            </div>
+            </div>
+
+		</div>
+
+        <!-- 查询结果展示 -->
+        <div class="skim-result">
+            <ul class="skim-item item1">
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- 第二项 -->
+            <ul class="skim-item item1">
+                <li>
+                    <div class="img-wrap"><img src=""  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src=""  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap"><img src="temp/small1.jpg"  alt="" /></div>
+                    <div class="img-title">
+                        <p>BH-2(12070885)</p>
+                        <p>(5-1#01)</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+	</div>
+
+	<!-- 查询主体]] -->
+       <!--关联JS文件-->
+    <script type="text/javascript" src="js/jquery.1.7.2.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+     <script type="text/javascript" src="js/tingToast.js"></script>
+    <script type="text/javascript" src="js/listLoop.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="js/huayan.js"></script>
+   
+</body>
+</html>

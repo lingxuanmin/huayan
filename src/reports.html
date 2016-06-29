@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Reports using TreeGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/datagrid-detailview.js"></script>
+</head>
+<body>
+	
+	<table title="Reports using TreeGrid" class="easyui-treegrid" id="dg" style="width:880px;height:250px"
+			data-options="
+				url: '/treegrid_data3.json',
+				method: 'get',
+				rownumbers: true,
+				showFooter: true,
+				idField: 'id',
+				treeField: 'region'
+			">
+		<thead frozen="true">
+			<tr>
+				<th field="region" width="100">编号</th>
+			</tr>
+		</thead>
+		<thead>
+			<tr>
+				<th colspan="3" rowspan="2">基本信息</th>
+				<th colspan="3" rowspan="2">长宽厚(cm)</th>
+				<th colspan="6" rowspan="1">扣尺信息(cm)</th>
+			</tr>
+			<tr>
+			
+				<th colspan="2" rowspan="1">扣一</th>
+				<th colspan="2" rowspan="1">扣二</th>
+				<th colspan="2" rowspan="1">扣三</th>
+				
+			</tr>
+			<tr>
+				<th field="f1"  width="60" align="right">荒料</th>
+				<th field="f1"  width="60" align="right">架号</th>
+				<th field="f2" width="60" align="right">片号</th>
+				<th field="f3" width="60" align="right">长</th>
+				<th field="f4" width="60" align="right">宽</th>
+				<th field="f5" width="60" align="right">厚</th>
+				<th field="f6" width="60" align="right">长</th>
+				<th field="f7" width="60" align="right">宽</th>
+				<th field="f6" width="60" align="right">长</th>
+				<th field="f7" width="60" align="right">宽</th>
+				<th field="f6" width="60" align="right">长</th>
+				<th field="f7" width="60" align="right">宽</th>
+			</tr>
+		</thead>
+	</table>
+
+	<script type="text/javascript">
+		$('#dg').datagrid({
+		    view: detailview,
+		    detailFormatter:function(index,row){
+		        return '<div style="padding:2px"><table class="ddv"></table></div>';
+		    },
+		    onExpandRow: function(index,row){
+		        var ddv = $(this).datagrid('getRowDetail',index).find('table.ddv');
+		        ddv.datagrid({
+		            url:'/treegrid_data3.json?f1='+row.f1,
+		            fitColumns:true,
+		            singleSelect:true,
+		            rownumbers:true,
+		            loadMsg:'',
+		            height:'auto',
+		            columns:[[
+		                {field:'f1',title:'测试',width:100},
+		                {field:'f2',title:'Quantity',width:100},
+		                {field:'f3',title:'Unit Price',width:100}
+		            ]],
+		            onResize:function(){
+		                $('#dg').datagrid('fixDetailRowHeight',index);
+		            },
+		            onLoadSuccess:function(){
+		                setTimeout(function(){
+		                    $('#dg').datagrid('fixDetailRowHeight',index);
+		                },0);
+		            }
+		        });
+		        $('#dg').datagrid('fixDetailRowHeight',index);
+		    }
+		});
+	</script>
+
+</body>
+</html>

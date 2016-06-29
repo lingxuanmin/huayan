@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>华研大板数据采集系统</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <!--关联样式文件-->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/huayan.css" />
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+  
+</head>
+<body>
+    <!-- 头部 -->
+    <!--#include virtual="header.html"-->
+    <!-- 首页主体[[ -->
+    <div class="content wrapper clearfix">
+        <!-- 左半边表单提交 -->
+        <div class="left-data">
+            <div class="data-opt">
+               <a href="#" title="上传" class="upload">
+                   <i class="icon iconfont">&#xe606;</i>
+                   <span class="upload">保存并上传</span>
+               </a>
+               <a href="#" title="添加项" class="add">
+                   <i class="icon iconfont">&#xe61a;</i>
+                   <span>添加项</span>
+               </a>
+               <a href="#" title="删除项" class="del">
+                   <i class="icon iconfont">&#xe677;</i>
+                   <span>删除项</span>
+               </a>
+               <a href="#" title="作废" class="cancles">
+                   <i class="icon iconfont">&#xe60f;</i>
+                   <span>作废项</span>
+               </a>
+               
+            </div>
+            <!-- 数据录入项 -->
+            <div class="data-enter clearfix">
+              <div class="item-list">
+                  <div class="enter-item clearfix">
+                      <div class="i-name">荒料编号:</div>
+                      <div class="i-input ">
+                          <div class="input-wrap item1">
+                            <input type="text" class="" maxlength="20" />
+                          </div>
+                          <a href="javascript:void(0);" title="查询编号" class="iconfont query-id">&#xe60f;</a>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">石材品种:</div>
+                      <div class="i-input">
+                          <div class="item2 input-wrap">
+                            <input type="text" class="" maxlength="20" />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">架号:</div>
+                      <div class="i-input">
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                        <div class="split">-</div>
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">板厚(cm):</div>
+                      <div class="i-input">
+                          <div class="item2 input-wrap">
+                            <input type="text" class="" maxlength="20" />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">大板片号:</div>
+                      <div class="i-input">
+                          <div class="item2 input-wrap">
+                            <input type="text" class="" maxlength="20" />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">光度:</div>
+                      <div class="i-input">
+                          <div class="item2 input-wrap">
+                            <input type="text" class="" maxlength="20" />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">采集时间:</div>
+                      <div class="i-input">
+                          <div class="item2 input-wrap">
+                            <input type="text" class="" maxlength="20" />
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- 右半边 -->
+                <div class="item-list">
+                  <div class="enter-item clearfix">
+                      <div class="i-name">长宽(cm):</div>
+                      <div class="i-input">
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                        <div class="split">*</div>
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">扣尺1(cm):</div>
+                      <div class="i-input">
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                        <div class="split">*</div>
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">扣尺2(cm):</div>
+                      <div class="i-input">
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                        <div class="split">*</div>
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">扣尺2(cm):</div>
+                      <div class="i-input">
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                        <div class="split">*</div>
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">扣尺4(cm):</div>
+                      <div class="i-input">
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                        <div class="split">*</div>
+                        <div class="input-wrap item3">
+                          <input type="text" class="" maxlength="20" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">扣尺(㎡):</div>
+                      <div class="i-input">
+                          <div class="item2 input-wrap">
+                            <input type="text" class="" maxlength="20" />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="enter-item clearfix">
+                      <div class="i-name">实际(㎡):</div>
+                      <div class="i-input">
+                          <div class="item2 input-wrap">
+                            <input type="text" class="" maxlength="20" />
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+
+              <div class="tip-qr clearfix">
+                <!-- 友情提醒 -->
+                <div class="friend-tips clearfix ">
+                    <p> 注：</p>
+                    <p> 1、哈萨克的风景哈可怜的</p>
+                    <p> 2、哈萨克的风景哈可怜的，技术开房间大家看法</p>
+                    <p> 3、哈萨克的风景哈可怜，等哈哈飞度和的</p>
+                    <p> 4、哈萨克的风景哈可怜，等哈哈飞度和的</p>
+                </div>
+                <!-- 二维码 -->
+                <div class="qr"><img src="temp/qm-down.png" alt="二维码" class=""></div>
+              </div>
+                
+            </div>
+
+        </div>
+
+        <!-- 右边图片展示 -->
+        <div class="right-show"> 
+            <div class="pic-opt">
+                <a href="javascript:void(0);" title="图片操作" class="r"></a>
+                <a href="javascript:void(0);" title="图片操作" class=""></a>
+                <a href="javascript:void(0);" title="图片操作" class=""></a>
+                <a href="javascript:void(0);" title="图片操作" class=""></a>
+                <a href="javascript:void(0);" title="图片操作" class=""></a>
+                <a href="javascript:void(0);" title="图片操作" class=""></a>
+                <a href="javascript:void(0);" title="图片操作" class=""></a>
+                <a href="javascript:void(0);" title="图片操作" class=""></a>
+            </div>
+
+            <!-- 大图展示 -->
+            <div class="big-pic">
+              <!-- 没有 -->
+              <span class="has-not">(没有图片显示)</span>              
+              <!-- 有大图 -->
+              <img src="" alt="大图1" class="big-img" />
+            </div>
+        </div>
+
+        <!-- 小的缩略图 -->
+        <div class="small-pic">
+          <!-- tab分类 -->
+          <ul class="small-pic-tab">
+            <li class="current">待确定大板</li>
+            <li>本周生产记录</li>
+          </ul>
+          <!-- 详细列表 -->
+          <div class=" small-list-wrap" >
+            <ul class="tab small-pic-list" style="display:block;">
+              <li>
+                <img src="temp/small1.jpg" alt="小图1" id="aa" large-src="temp/large01.jpg" />
+                <div class="img-title">
+                    <p>BH-2(12070885)</p>
+                    <p>(5-1#01)</p>
+                </div>
+              </li>
+              <li>
+                <img src="temp/small1.jpg" alt="小图1" large-src="temp/large02.jpg" />
+              </li>
+              <li><img src="temp/small1.jpg" alt="小图1" large-src="temp/large04.jpg" /></li>
+              <li><img src="temp/small1.jpg" alt="小图1"  large-src="temp/large01.jpg"/></li>
+              <li><img src="temp/small1.jpg" alt="小图1"  large-src="temp/large04.jpg"/></li>
+              <li><img src="temp/small1.jpg" alt="小图1"  large-src=""/></li>
+              <li><img src="temp/small1.jpg" alt="小图1"  large-src=""/></li>
+              <li><img src="temp/small1.jpg" alt="小图1" large-src="" /></li>
+              <li><img src="temp/small1.jpg" alt="小图1" large-src="" /></li>
+              <li><img src="temp/small1.jpg" alt="小图1"  large-src=""/></li>
+              <li><img src="temp/small1.jpg" alt="小图1"  large-src=""/></li>
+              <li><img src="temp/small1.jpg" alt="小图1" large-src="" /></li>
+              <li><img src="temp/small1.jpg" alt="小图1" large-src="" /></li>
+              <li><img src="temp/small1.jpg" alt="小图1" large-src="" /></li>
+              <li><img src="temp/small1.jpg" alt="小图1" large-src="" /></li>
+              <li><img src="" alt="小图1" large-src="" /></li>
+              <li><img src="" alt="小图1" large-src="" /></li>
+              <li><img src="" alt="小图1" large-src="" /></li>
+              <li><img src="" alt="小图1" large-src="" /></li>
+              <li><img src="" alt="小图1" large-src="" /></li>
+              <li><img src="" alt="小图1"  large-src=""/></li>
+              <li><img src="" alt="小图1" large-src="" /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+              <li><img src="" alt="小图1"  /></li>
+            </ul>
+            <!--d第二个tab展示项  -->
+            <div class="tab record-week">
+              <div class="easyui-layout" style="width:1190px;height:auto;min-height:216px;">
+                
+                <div data-options="region:'west',split:true" title="West" style="width:300px;">
+                    <ul class="easyui-tree">
+                      <li>
+                        <span>My Documents</span>
+                        <ul>
+                          <li data-options="state:'closed'">
+                            <span>Photos</span>
+                            <ul>
+                              <li>
+                                <span>Friend</span>
+                              </li>
+                              <li>
+                                <span>Wife</span>
+                              </li>
+                              <li>
+                                <span>Company</span>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <span>Program Files</span>
+                            <ul>
+                              <li>Intel</li>
+                              <li>Java</li>
+                              <li>Microsoft Office</li>
+                              <li>Games</li>
+                            </ul>
+                          </li>
+                          <li>index.html</li>
+                          <li>about.html</li>
+                          <li>welcome.html</li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+                <div data-options="region:'center',title:'Main Title',iconCls:'icon-ok'" style="height:890px;">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- 首页主体]] --> 
+
+
+    <!-- 小图列表右击事件弹出操作菜单 -->
+    <div id="right-click-menu" class="right-click-menu">
+        <a href="javascript:void(0);" title="换架" class="opt1">换架</a>
+        <a href="javascript:void(0);" title="换架" class="opt1">换架</a>
+        <a href="javascript:void(0);" title="换架" class="opt1">删除项</a>
+        <a href="javascript:void(0);" title="换架" class="opt1">作废</a>
+        <a href="javascript:void(0);" title="换架" class="opt1">换架</a>
+        <a href="javascript:void(0);" title="换架" class="opt1">保存并上传当前项</a>
+    </div>
+
+
+    <!--关联JS文件-->
+    <script type="text/javascript" src="js/jquery.1.7.2.js"></script>
+   
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/jquery-smartMenu.js"></script>
+    <script type="text/javascript" src="js/tingToast.js"></script>
+    <script type="text/javascript" src="js/listLoop.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="js/rotate.js"></script>
+    <script type="text/javascript" src="js/huayan.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>华研大板数据采集系统</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <!--关联样式文件-->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/huayan.css" />
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <!--#include virtual="header2.html"-->
+    <!-- 查询主体[[ -->
+	<div class="query-content wrapper">
+		
+        <!-- 查询条件 -->
+		<div class="query-condition">
+			<table class="condition" border="1" align="center">
+                <caption align="top">历史数据查询条件</caption> 
+                <tr>
+                    <td class="qitem-name">石料品种：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">荒料编号：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">架号：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">采集时间起：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">采集时间迄：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">数据上传：</td>
+                    <td class="qitem-input">
+                        <input type="checkbox"  class="if-upload check" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">入库时间起：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">入库时间迄：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">作废：</td>
+                    <td class="qitem-input">
+                        <input type="checkbox"  class="voided check" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="qitem-name">图像文件：</td>
+                    <td class="qitem-input">
+                        <input type="text" maxlength="20" class="inp-value" />
+                    </td>
+                </tr>
+            </table>
+            <!-- 按钮 -->
+            <div class="btn clearfix">
+                <a href="javascript:void(0);" class="btn-query" title="数据查询">数据查询</a>
+                <a href="javascript:void(0);" class="btn-scan" title="查看图片">查看图片</a>
+            </div>
+            <!-- 图片预览区 -->
+            <div class="img-scan">
+               <!-- 没有显示文字 有显示图片 (开发做个判断) -->
+               <span class="has-not">(没有图片显示)</span>
+
+               <img src="" alt="图片预览"  class="has-img" />
+            </div>
+
+		</div>
+
+        <!-- 查询结果展示 -->
+        <div class="query-result">
+            <!-- <table class="result-datas" border="1" align="center">
+                <caption align="top">采集的荒料大板数据列表</caption> 
+                <tr>
+                    <th>话多很卡的</th>
+                    <th>话多很卡的</th>
+                    <th>话多很卡的</th>
+                    <th>话多很卡的</th>
+                    <th>话多很卡的</th>
+                    <th>话多很卡的</th>
+                    <th>话多很卡的</th>
+                </tr>
+                <tr>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                </tr>
+                <tr>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                </tr>
+                <tr>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                </tr>
+                <tr>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                </tr>
+
+                <tr>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                </tr><tr>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                </tr>
+
+                <tr>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                </tr>
+                <tr>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                    <td>答复客户23</td>
+                </tr>
+
+            </table> -->
+            <table title="Reports using TreeGrid" class="easyui-treegrid" id="dg" style="width:880px;height:250px"
+                    data-options="
+                        url: 'treedata.json',
+                        method: 'get',
+                        rownumbers: true,
+                        showFooter: true,
+                        idField: 'id',
+                        treeField: 'region'
+                    ">
+                <thead frozen="true">
+                    <tr>
+                        <th field="region" width="100">编号</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th colspan="3" rowspan="2">基本信息</th>
+                        <th colspan="3" rowspan="2">长宽厚(cm)</th>
+                        <th colspan="6" rowspan="1">扣尺信息(cm)</th>
+                    </tr>
+                    <tr>
+                    
+                        <th colspan="2" rowspan="1">扣一</th>
+                        <th colspan="2" rowspan="1">扣二</th>
+                        <th colspan="2" rowspan="1">扣三</th>
+                        
+                    </tr>
+                    <tr>
+                        <th field="f1"  width="60" align="right">荒料</th>
+                        <th field="f1"  width="60" align="right">架号</th>
+                        <th field="f2" width="60" align="right">片号</th>
+                        <th field="f3" width="60" align="right">长</th>
+                        <th field="f4" width="60" align="right">宽</th>
+                        <th field="f5" width="60" align="right">厚</th>
+                        <th field="f6" width="60" align="right">长</th>
+                        <th field="f7" width="60" align="right">宽</th>
+                        <th field="f6" width="60" align="right">长</th>
+                        <th field="f7" width="60" align="right">宽</th>
+                        <th field="f6" width="60" align="right">长</th>
+                        <th field="f7" width="60" align="right">宽</th>
+                    </tr>
+                </thead>
+            </table>
+
+           </div>
+
+	</div>
+
+	<!-- 查询主体]] -->
+    <!--关联JS文件-->
+    <script type="text/javascript" src="js/jquery.1.7.2.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/datagrid-detailview.js"></script>
+    <script type="text/javascript" src="js/tingToast.js"></script>
+    <script type="text/javascript" src="js/listLoop.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="js/huayan.js"></script>
+
+     <script type="text/javascript">
+        $('#dg').datagrid({
+            view: detailview,
+            detailFormatter:function(index,row){
+                return '<div style="padding:2px"><table class="ddv"></table></div>';
+            },
+            onExpandRow: function(index,row){
+                var ddv = $(this).datagrid('getRowDetail',index).find('table.ddv');
+                ddv.datagrid({
+                    url:'treegrid_data3.json?f1='+row.f1,
+                    fitColumns:true,
+                    singleSelect:true,
+                    rownumbers:true,
+                    loadMsg:'',
+                    height:'auto',
+                    columns:[[
+                        {field:'f1',title:'测试',width:100},
+                        {field:'f2',title:'Quantity',width:100},
+                        {field:'f3',title:'Unit Price',width:100}
+                    ]],
+                    onResize:function(){
+                        $('#dg').datagrid('fixDetailRowHeight',index);
+                    },
+                    onLoadSuccess:function(){
+                        setTimeout(function(){
+                            $('#dg').datagrid('fixDetailRowHeight',index);
+                        },0);
+                    }
+                });
+                $('#dg').treegrid('fixDetailRowHeight',index);
+            }
+        });
+    </script>
+   
+</body>
+</html>
